@@ -1,13 +1,28 @@
-// src/components/dashboard/products/SingleProduct.jsx
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import useFetch from '../../../hooks/useFetch';
+import axios from 'axios';
 import { Spin } from 'antd';
 
 const SingleProduct = () => {
   const { id } = useParams();
-  const [product, loading] = useFetch(`/products/${id}`);
+  const [product, setProduct] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchProduct = async () => {
+      try {
+        const response = await axios.get(`https://backend-e-commerce-production.up.railway.app/api/v1/products/${id}`);
+        setProduct(response.data);
+        setLoading(false);
+      } catch (error) {
+        console.error('Error fetching the product:', error);
+        setLoading(false);
+      }
+    };
+
+    fetchProduct();
+  }, [id]);
 
   if (loading) return <Spin size="large" />;
 
