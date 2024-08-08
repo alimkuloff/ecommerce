@@ -53,7 +53,7 @@ const RouteController = () => {
       },
 
       {
-         path: "/single-product/:id",
+         path: "/products/:id",
          element: <Suspense fallback={<Loading />}><SingleProduct /></Suspense>,
        },
 

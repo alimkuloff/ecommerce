@@ -8,7 +8,7 @@ const { Header } = Layout;
 const Navigation = () => {
   return (
     <Header className="navbar-header">
-      <div className="logo">MyLogo</div>
+      <div className="logo">NA.dev</div>
       <Menu mode="horizontal" className="navbar-menu">
         <Menu.Item key="1">
           <NavLink to="/" className="navbar-link">Home</NavLink>
