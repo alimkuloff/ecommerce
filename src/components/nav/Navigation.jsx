@@ -17,7 +17,7 @@ const Navigation = () => {
           <NavLink to="/auth" className="navbar-link">Auth</NavLink>
         </Menu.Item>
         <Menu.Item key="3">
-          <NavLink to="/cart" className="navbar-link">Cart</NavLink>
+          <NavLink to="/" className="navbar-link">Cart</NavLink>
         </Menu.Item>
         <Menu.Item key="4">
           <NavLink to="/dashboard" className="navbar-link">Dashboard</NavLink>
