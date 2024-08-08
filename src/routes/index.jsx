@@ -13,7 +13,6 @@ const Products = lazy(() => import("./dashboard/products/products"));
 const SingleProduct = lazy(() => import("./dashboard/products/singleProduct"));
 const Users = lazy(() => import("./dashboard/users/users"));
 const Profile = lazy(() => import("./dashboard/profile/profile"));
-const Cart = lazy(() => import("../components/cart/Cart"));
 
 const Auth = lazy(() => import("./auth/Auth"));
 const Login = lazy(() => import("./auth/login/Login"));
